@@ -1,16 +1,25 @@
 package 나만의알고리즘자료구조API;
-import java.util.HashSet;
+import java.util.Comparator;
 import java.util.Stack;
+import java.util.TreeSet;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 public class 연속된숫자의갯수 {
 	
-	public static void main(String[] args){
-		
+	
+	@Test
+	public void Type1Test(){
 		int[] array = new int[]{0,0,0,1,1,0,1,1,1,0,1,1,0,1,1,1,1,1};
+		Assert.assertEquals(5, type1(array));
+	}
+	
+	public static int type1(int[] array){		
 		
-		HashSet<Integer> set = new HashSet<Integer>();		
-		Stack<Integer> stack = new Stack<Integer>();
 		
+		TreeSet<Integer> set = new TreeSet<Integer>(Comparator.reverseOrder());		
+		Stack<Integer> stack = new Stack<Integer>();		
 		for(int temp : array){
 			if(stack.isEmpty()){
 				stack.push(temp);
@@ -32,7 +41,7 @@ public class 연속된숫자의갯수 {
 		if(stack.peek()==1)
 			set.add(stack.size());
 		
-		System.out.println();
+		return set.first();
 		
 	}
 
