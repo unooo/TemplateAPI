@@ -8,13 +8,9 @@ public static void dfs(int next, int n , int r) // 조합인경우 int idx를 추가
 		//todo
 		return;
 	}
-
-
 	for(int i =  ; i < n ; i ++){
 
-
 	}
-
 }
 
 
