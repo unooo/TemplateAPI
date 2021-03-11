@@ -18,6 +18,7 @@ public static void dfs(int next, int n , int r) // 조합인경우 int idx를 추가
 순열:
 //중복해서 뽑으면 안되므로 flag배열 필요
 public static boolean flag[] = new boolean[n]; // n개중에 r개를 뽑으므로 n개의 플래그배열생성
+ public static int path[];
 public static void dfs(int next, int n , int r) // 조합인경우 int idx를 추가
 {
 	if(next>=r){
